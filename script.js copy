@@ -1,0 +1,63 @@
+// script.js (Updated - No 3D)
+
+// Modal logic
+window.openModal = function (objectId) {
+  document.getElementById("modal-title").textContent = objectId;
+  document.getElementById("modal-description").textContent = `Description for ${objectId}`;
+  const image = document.getElementById("modal-image");
+  image.src = `images/${objectId}.gif`; // Replace with actual paths
+  image.alt = objectId;
+  document.getElementById("object-modal").classList.remove("hidden");
+};
+
+window.closeModal = function () {
+  document.getElementById("object-modal").classList.add("hidden");
+};
+
+document.getElementById("modal-close").addEventListener("click", closeModal);
+
+document.querySelectorAll(".object-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    const bubble = document.querySelector("#cursor-character .speech-bubble");
+    if (bubble) bubble.textContent = "Inspecting an object...";
+  });
+  card.addEventListener("mouseleave", () => {
+    const bubble = document.querySelector("#cursor-character .speech-bubble");
+    if (bubble) bubble.textContent = "Welcome. What are you hoping to find?";
+  });
+});
+
+// Sorting logic (placeholders)
+window.sortByName = () => console.log("Sort by Name");
+window.sortByYear = () => console.log("Sort by Year");
+window.sortByDateFound = () => console.log("Sort by Date Found");
+window.sortByDateLost = () => console.log("Sort by Date Lost");
+// Cursor character hover effect
+const cursorCharacter = document.getElementById("cursor-character");
+const speechBubble = document.querySelector("#cursor-character .speech-bubble");
+
+// When hovering over the character
+cursorCharacter.addEventListener("mouseenter", () => {
+  document.body.classList.add("custom-cursor");
+  speechBubble.textContent = "You’ve become the guide.";
+});
+
+cursorCharacter.addEventListener("mouseleave", () => {
+  document.body.classList.remove("custom-cursor");
+  speechBubble.textContent = "Welcome. What are you hoping to find?";
+});
+
+// Object hover effect
+document.querySelectorAll(".object-card").forEach((card, index) => {
+  card.addEventListener("mouseenter", () => {
+    document.body.classList.remove("custom-cursor"); // revert to normal
+    speechBubble.textContent = `Object ${index + 1}... What secrets do you hold?`;
+  });
+  card.addEventListener("mouseleave", () => {
+    speechBubble.textContent = "Welcome. What are you hoping to find?";
+  });
+
+  card.addEventListener("click", () => {
+    speechBubble.textContent = `You opened Object ${index + 1}.`;
+  });
+});

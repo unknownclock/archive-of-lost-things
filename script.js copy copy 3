@@ -1,0 +1,72 @@
+// script.js (Updated - Cursor Changes Per Object + Individual Descriptions)
+
+// Cursor logic
+const cursorCharacter = document.getElementById("cursor-character");
+const speechBubble = document.querySelector("#cursor-character .speech-bubble");
+
+// Array of custom cursors for each object
+const objectCursors = [
+  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Remove%20background%20project.png?v=1743135884633",
+  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cute-cursors-pixel-heart-cursor.png?v=1743135891441",
+  "images/cursor-object3.png",
+  "images/cursor-object4.png",
+  "images/cursor-object5.png",
+  "images/cursor-object6.png",
+  "images/cursor-object7.png",
+  "images/cursor-object8.png",
+  "images/cursor-object9.png",
+  "images/cursor-object10.png"
+];
+
+// Unique speech text per object
+const objectTexts = [
+  "This watch once ticked with memory.",
+  "A flicker lost in time.",
+  "Admit One to a forgotten film.",
+  "Echoes of light and glass.",
+  "The scent of pages long gone.",
+  "Still warm with laughter.",
+  "Held in secret for years.",
+  "Dusty, but beloved.",
+  "Kept close to the chest.",
+  "Whispers in the seams."
+];
+
+// Hovering over the guide character
+if (cursorCharacter && speechBubble) {
+  cursorCharacter.addEventListener("mouseenter", () => {
+    document.body.style.cursor = "url('https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Remove%20background%20project.png?v=1743135884633'), auto";
+    speechBubble.textContent = "You’ve become the guide.";
+  });
+
+  cursorCharacter.addEventListener("mouseleave", () => {
+    document.body.style.cursor = "auto";
+    speechBubble.textContent = "Welcome. What are you hoping to find?";
+  });
+}
+
+// Object hover effect with custom cursors and descriptions
+const objectCards = document.querySelectorAll(".object-card");
+
+objectCards.forEach((card, index) => {
+  card.addEventListener("mouseenter", () => {
+    const cursorImage = objectCursors[index] || "images/default-cursor.png";
+    document.body.style.cursor = `url('${cursorImage}'), auto`;
+    if (speechBubble) speechBubble.textContent = objectTexts[index] || "What secrets do you hold?";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    document.body.style.cursor = "auto";
+    if (speechBubble) speechBubble.textContent = "Welcome. What are you hoping to find?";
+  });
+
+  card.addEventListener("click", () => {
+    if (speechBubble) speechBubble.textContent = `You opened Object ${index + 1}.`;
+  });
+});
+
+// Sorting logic (placeholders)
+window.sortByName = () => console.log("Sort by Name");
+window.sortByYear = () => console.log("Sort by Year");
+window.sortByDateFound = () => console.log("Sort by Date Found");
+window.sortByDateLost = () => console.log("Sort by Date Lost");

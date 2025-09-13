@@ -1,0 +1,65 @@
+// script.js (Updated - Cursor Changes Per Object)
+
+// Modal logic
+window.openModal = function (objectId) {
+  document.getElementById("modal-title").textContent = objectId;
+  document.getElementById("modal-description").textContent = `Description for ${objectId}`;
+  const image = document.getElementById("modal-image");
+  image.src = `images/${objectId}.gif`; // Replace with actual paths
+  image.alt = objectId;
+  document.getElementById("object-modal").classList.remove("hidden");
+};
+
+
+
+// Cursor logic
+const cursorCharacter = document.getElementById("cursor-character");
+const speechBubble = document.querySelector("#cursor-character .speech-bubble");
+
+// Array of custom cursors for each object
+const objectCursors = [
+  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Remove%20background%20project.png?v=1743135884633",
+  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cute-cursors-pixel-heart-cursor.png?v=1743135891441",
+  "images/cursor-object3.png",
+  "images/cursor-object4.png",
+  "images/cursor-object5.png",
+  "images/cursor-object6.png",
+  "images/cursor-object7.png"
+];
+
+// When hovering over the character
+cursorCharacter?.addEventListener("mouseenter", () => {
+  document.body.style.cursor = "url('images/cursor-character.png'), auto";
+  speechBubble.textContent = "You’ve become the guide.";
+});
+
+cursorCharacter?.addEventListener("mouseleave", () => {
+  document.body.style.cursor = "auto";
+  speechBubble.textContent = "Welcome. What are you hoping to find?";
+});
+
+// Object hover effect with custom cursors
+const objectCards = document.querySelectorAll(".object-card");
+
+objectCards.forEach((card, index) => {
+  card.addEventListener("mouseenter", () => {
+    const cursorImage = objectCursors[index] || "images/default-cursor.png";
+    document.body.style.cursor = `url('${cursorImage}'), auto`;
+    speechBubble.textContent = `Object ${index + 1}... What secrets do you hold?`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    document.body.style.cursor = "auto";
+    speechBubble.textContent = "Welcome. What are you hoping to find?";
+  });
+
+  card.addEventListener("click", () => {
+    speechBubble.textContent = `You opened Object ${index + 1}.`;
+  });
+});
+
+// Sorting logic (placeholders)
+window.sortByName = () => console.log("Sort by Name");
+window.sortByYear = () => console.log("Sort by Year");
+window.sortByDateFound = () => console.log("Sort by Date Found");
+window.sortByDateLost = () => console.log("Sort by Date Lost");

@@ -1,0 +1,534 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #69F7BE;
+  --color-text-main: #000000;
+  --color-text-header: #2800FF;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+@font-face {
+  font-family: 'Unknown-MX'; /* This is an arbitrary name -- whatever works for you */
+  src: url('https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Unknown-MX.woff?v=1743073077343') 
+    format('woff');
+}
+
+@font-face {
+  font-family: 'Unknown-RND'; /* This is an arbitrary name -- whatever works for you */
+  src: url('https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Unknown-RND.woff?v=1743073085375') 
+    format('woff');
+}
+
+@font-face {
+  font-family: 'Unknown-PX'; /* This is an arbitrary name -- whatever works for you */
+  src: url('https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Unknown-PX.woff?v=1743073080861') 
+    format('woff');
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 0.25rem 0 0.25rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "eurostile", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  border-top: 4px solid #fff;
+  /*border-top: 4px solid #fff; */
+}
+
+
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family:"eurostile", sans-serif;
+  background-color: var(--color-bg);
+  background-color: black; /* your base color */
+  background-image: radial-gradient(circle, #98A6A2 4%, transparent 6%);
+  background-size: 40px 40px; /* spacing of dots */
+  padding: 1rem;
+  color: white;
+  /*cursor: none --> add back if you want a specific cursor for the submit page */
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: var(--color-text-header);
+  font-family: "eurostile", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: "eurostile", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+/* Subheading */
+h2 {
+  font-family: "eurostile-condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+}
+
+h3 {
+  font-family: "eurostile-condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+/* Links that open files in the editor */
+.fileopener {
+  /* cursor:pointer; */
+  font-weight:bold;
+  border-bottom:3px solid var(--color-primary);
+  color: var(--color-secondary);
+}
+.fileopener:hover {
+  border-bottom:3px solid var(--color-secondary);
+}
+
+
+/* Header layout */
+.header {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#header-title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Unknown-PX", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Right-side buttons */
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Submit & About Buttons */
+#submit, #about, #clickSortBy {
+  background-color: white;
+  color: black;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+/* About Hover Tooltip */
+.about-wrapper {
+  position: relative;
+}
+
+.about-hover {
+  display: none;
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background: white;
+  color: black;
+  padding: 0.8rem;
+  font-size: 0.85rem;
+  width: 400px;
+  border: 1px solid black;
+  z-index: 20;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.about-wrapper:hover .about-hover {
+  display: block;
+}
+
+/* Sort Section at Bottom */
+#sort-section {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 5;
+}
+
+#dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  bottom: 110%;
+  right: 0;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  z-index: 15;
+  min-width: 160px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 0.85rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+/* Object Grid Layout */
+#object-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+  gap: 1.5rem;
+  padding: 7rem 2rem 5rem;
+}
+
+/* Card Style */
+.object-card {
+  background: transparent;
+  border: 10px solid white;
+  border-radius: 16px;
+  padding: 10px;
+  transition: 0.3s ease;
+  position: relative;
+  transition: 0.3s ease;
+  /* cursor: pointer; */
+  /* Corner highlights only - skips full top edge */
+ 
+}
+
+.object-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* Hover effect (red target border) */
+.object-card::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 4px solid red;
+  border-radius: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  /* Corner highlights only - skips full top edge */
+  clip-path: polygon(
+    0% 0%, 10% 0%, 10% 100%, 100% 10%, 10% 100%,   /* Top-left corner */
+    90% 0%, 100% 0%, 100% 10%, 90% 10%, 90% 0%, /* Top-right corner */
+    100% 100%, 100% 100%, 90% 100%, 90% 90%, 100% 90%, /* Bottom-right */
+    0% 90%, 10% 90%, 10% 100%, 0% 100%, 4% 90%  /* Bottom-left */
+  );
+  z-index: 1;
+}
+
+.object-card:hover::before {
+  opacity: 1;
+}
+
+.hidden { display: none !important; }
+
+
+.popup-info {
+  color: white;
+  max-width: 400px;
+}
+.object-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90vw;
+  height: 90vh;
+  max-width: 1200px;
+  background: black;
+  border: 2px solid white;
+  /*border-radius: 16px; */
+  overflow: auto;
+}
+
+.popup-left {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #111;
+}
+
+.popup-left img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.popup-right {
+  flex: 1 1 50%;
+  padding: 2rem;
+  color: white;
+  overflow-y: auto;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.back-button img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+/* for the close/back button's color and styling */
+.popup-right button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#cursor-character {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#cursor-character img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.speech-bubble {
+  background: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  position: relative;
+  font-family: "eurostile", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom-color: white;
+}
+
+.object-description {
+  font-family: "eurostile", sans-serif;
+  color: white;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+.object-description ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.object-description li {
+  margin-bottom: 0.5rem;
+}
+
+.object-description h2 {
+  color: #F28444;
+  margin-bottom: 1rem;
+  font-family: "eurostile-condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.submit-text {
+  color: white;
+}
+
+#form-link {
+  text-align: center;
+}
+#form-link a {
+  color: #F28444
+}
+
+#header-title a {
+  color: white;
+  text-decoration: none;
+}
+/* color: #F28444 */
