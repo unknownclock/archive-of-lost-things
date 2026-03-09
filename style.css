@@ -50,7 +50,7 @@ to this section's matching END comment to see page-specific styles.
 
 @font-face {
   font-family: "Unknown-MX"; /*  */
-  src: url("fonts/Unknown-MX.woff")
+  src: url("archive-of-lost-things/fonts/Unknown-MX.woff")
     format("woff");
 }
 
@@ -62,7 +62,7 @@ to this section's matching END comment to see page-specific styles.
 
 @font-face {
   font-family: "Unknown-PX"; /*  */
-  src: url("fonts/Unknown-PX.woff")
+  src: url("archive-of-lost-things/fonts/Unknown-PX.woff")
     format("woff");
 }
 
