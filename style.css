@@ -50,19 +50,19 @@ to this section's matching END comment to see page-specific styles.
 
 @font-face {
   font-family: "Unknown-MX"; /*  */
-  src: url("archive-of-lost-things/fonts/Unknown-MX.woff")
+  src: url("/archive-of-lost-things/fonts/Unknown-MX.woff")
     format("woff");
 }
 
 @font-face {
   font-family: "Unknown-RND"; /* */
-  src: url("archive-of-lost-things/fonts/Unknown-RND.woff")
+  src: url("/archive-of-lost-things/fonts/Unknown-RND.woff")
     format("woff");
 }
 
 @font-face {
   font-family: "Unknown-PX"; /*  */
-  src: url("archive-of-lost-things/fonts/Unknown-PX.woff")
+  src: url("/archive-of-lost-things/fonts/Unknown-PX.woff")
     format("woff");
 }
 
