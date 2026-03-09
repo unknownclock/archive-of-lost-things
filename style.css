@@ -49,20 +49,20 @@ to this section's matching END comment to see page-specific styles.
 }
 
 @font-face {
-  font-family: "Unknown-MX"; /* This is an arbitrary name -- whatever works for you */
+  font-family: "Unknown-MX"; /*  */
   src: url("fonts/Unknown-MX.woff")
     format("woff");
 }
 
 @font-face {
-  font-family: "Unknown-RND"; /* This is an arbitrary name -- whatever works for you */
-  src: url("https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Unknown-RND.woff?v=1743073085375")
+  font-family: "Unknown-RND"; /* */
+  src: url("archive-of-lost-things/fonts/Unknown-RND.woff")
     format("woff");
 }
 
 @font-face {
-  font-family: "Unknown-PX"; /* This is an arbitrary name -- whatever works for you */
-  src: url("https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Unknown-PX.woff?v=1743073080861")
+  font-family: "Unknown-PX"; /*  */
+  src: url("fonts/Unknown-PX.woff")
     format("woff");
 }
 
