@@ -50,7 +50,7 @@ to this section's matching END comment to see page-specific styles.
 
 @font-face {
   font-family: "Unknown-MX"; /* This is an arbitrary name -- whatever works for you */
-  src: url("https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Unknown-MX.woff?v=1743073077343")
+  src: url("fonts/Unknown-MX.woff")
     format("woff");
 }
 
