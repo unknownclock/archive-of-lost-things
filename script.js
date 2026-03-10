@@ -7,7 +7,7 @@ const cursorImg = cursorCharacter ? cursorCharacter.querySelector("img") : null;
 const speechBubble = cursorCharacter ? cursorCharacter.querySelector(".speech-bubble") : null;
 
 // Default values using your provided URLs
-const defaultCursorImage = "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Remove%20background%20project.png?v=1743135884633";
+const defaultCursorImage = "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/Remove%20background%20project.png";
 const defaultSpeech = "Welcome. What are you hoping to find?";
 
 // Set initial default values
@@ -29,13 +29,13 @@ if (cursorCharacter && speechBubble) {
 
 // Array of custom cursor images for each object (using your provided URLs)
 const objectCursors = [
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Tactical%20Knife%20%26%20Night%20Vision%20Device--cursor--SweezyCursors.png?v=1744120642408",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cute-cursors-pixel-heart-cursor.png?v=1744120826828",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cute-cursors-pixel-heart-cursor.png?v=1744120826828",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cute-cursors-pixel-heart-cursor.png?v=1744120826828",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/Turquoise%20Futuristic%20Arrow%203D--cursor--SweezyCursors.png?v=1744120505470",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/fire%20extinguisher%20cursor.png?v=1744120735333",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/scared%20cursor.png?v=1744120510937",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/Tactical%20Knife%20%26%20Night%20Vision%20Device--cursor--SweezyCursors.png",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/cute-cursors-pixel-heart-cursor.png",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/cute-cursors-pixel-heart-cursor.png",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/cute-cursors-pixel-heart-cursor.png",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/Turquoise%20Futuristic%20Arrow%203D--cursor--SweezyCursors.png",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/fire%20extinguisher%20cursor.png",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/scared%20cursor.png",
   "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/bored%20cursor.png?v=1744120515342",
   "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cursoji-smiling-and-relieved-face-cursor-pack.png?v=1745694106974",
   "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cursoji-face-with-rolling-eyes-and-unamused-face-cursor-pack.png?v=1745702376099"
