@@ -36,9 +36,9 @@ const objectCursors = [
   "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/Turquoise%20Futuristic%20Arrow%203D--cursor--SweezyCursors.png",
   "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/fire%20extinguisher%20cursor.png",
   "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/scared%20cursor.png",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/bored%20cursor.png?v=1744120515342",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cursoji-smiling-and-relieved-face-cursor-pack.png?v=1745694106974",
-  "https://cdn.glitch.global/8f3c7e5e-b0a6-453f-87c1-c2255e286c8a/cursoji-face-with-rolling-eyes-and-unamused-face-cursor-pack.png?v=1745702376099"
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/bored%20cursor.png",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/cursoji-smiling-and-relieved-face-cursor-pack.png",
+  "https://raw.githubusercontent.com/unknownclock/archive-of-lost-things/refs/heads/main/images/cursoji-face-with-rolling-eyes-and-unamused-face-cursor-pack.png"
 ];
 
 // Unique speech text per object
