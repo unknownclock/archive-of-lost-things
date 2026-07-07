@@ -108,7 +108,7 @@ body {
   font-family: "eurostile", sans-serif;
   background-color: var(--color-bg);
   background-color: black; /* your base color */
-  background-image: radial-gradient(circle, #98a6a2 6%, transparent 10%);
+  /*background-image: radial-gradient(circle, #98a6a2 6%, transparent 10%);
   background-size: 40px 40px; /* spacing of dots */
   padding: 1rem;
   cursor: none;
